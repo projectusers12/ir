@@ -52,3 +52,6 @@ for term in sorted(inverted_index.keys()):
 # Step 4: Count and display total number of unique terms
 total_unique_terms = len(inverted_index)
 print("\nTotal number of unique terms indexed:", total_unique_terms)
+
+
+pip3 install nltk
