@@ -13,7 +13,7 @@ def editdist(str1, str2, m, n):
         editdist(str1, str2, m-1, n-1)   # Replace
     )
 
-# --- Execution ---
+
 str1 = input("Enter string 1: ")
 str2 = input("Enter string 2: ")
 print("Edit Distance is:", editdist(str1, str2, len(str1), len(str2)))
