@@ -1,22 +1,22 @@
 import nltk
 from nltk.corpus import stopwords
 
-# Download stopwords
+
 nltk.download('stopwords')
 stop_words = stopwords.words('english')
 
-# Define the documents
-document1 = "The quick brown fox jumped over the lazy dog"
-document2 = "The lazy dog slept in the sun"
 
-# Step 1: Tokenize documents
+document1 = ""
+document2 = ""
+
+
 tokens1 = document1.lower().split()
 tokens2 = document2.lower().split()
 
-# Combine tokens into unique terms
+
 terms = list(set(tokens1 + tokens2))
 
-# Step 2: Build the inverted index
+
 inverted_index = {}
 occ_num_doc1 = {}
 occ_num_doc2 = {}
@@ -37,7 +37,7 @@ for term in terms:
 
     inverted_index[term] = documents
 
-# Step 3: Display inverted index in alphabetical order
+
 print("Inverted Index (Alphabetical Order):\n")
 
 for term in sorted(inverted_index.keys()):
@@ -49,7 +49,7 @@ for term in sorted(inverted_index.keys()):
             print(f"{doc} ({occ_num_doc2.get(term, 0)})", end=" ")
     print()
 
-# Step 4: Count and display total number of unique terms
+
 total_unique_terms = len(inverted_index)
 print("\nTotal number of unique terms indexed:", total_unique_terms)
 
